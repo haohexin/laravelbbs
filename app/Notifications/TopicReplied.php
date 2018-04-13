@@ -34,14 +34,14 @@ class TopicReplied extends Notification implements ShouldQueue
      */
     public function via($notifiable)
     {
-        return ['database','mail'];
+        return ['database', 'mail'];
     }
 
 
     public function toDatabase($notifiable)
     {
         $topic = $this->reply->topic;
-        $link =  $topic->link(['#reply' . $this->reply->id]);
+        $link = $topic->link(['#reply' . $this->reply->id]);
 
         // 存入数据库里的数据
         return [
