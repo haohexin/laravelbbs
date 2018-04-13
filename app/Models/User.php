@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+    use Traits\ActiveUserHelper;
     use HasRoles;
     use Notifiable {
         notify as protected laravelNotify;

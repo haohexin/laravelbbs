@@ -1,6 +1,5 @@
 <?php
 
-use Auth;
 use App\Models\User;
 
 return [
